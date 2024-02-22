@@ -1,0 +1,15 @@
+C:\Users\Mlwest5ITX\Desktop\C Sharp Master Folder\Coding Challenges Feb 001\Coding Challenges Feb 001\bin\Debug\net7.0\Coding Challenges Feb 001.exe
+C:\Users\Mlwest5ITX\Desktop\C Sharp Master Folder\Coding Challenges Feb 001\Coding Challenges Feb 001\bin\Debug\net7.0\Coding Challenges Feb 001.deps.json
+C:\Users\Mlwest5ITX\Desktop\C Sharp Master Folder\Coding Challenges Feb 001\Coding Challenges Feb 001\bin\Debug\net7.0\Coding Challenges Feb 001.runtimeconfig.json
+C:\Users\Mlwest5ITX\Desktop\C Sharp Master Folder\Coding Challenges Feb 001\Coding Challenges Feb 001\bin\Debug\net7.0\Coding Challenges Feb 001.dll
+C:\Users\Mlwest5ITX\Desktop\C Sharp Master Folder\Coding Challenges Feb 001\Coding Challenges Feb 001\bin\Debug\net7.0\Coding Challenges Feb 001.pdb
+C:\Users\Mlwest5ITX\Desktop\C Sharp Master Folder\Coding Challenges Feb 001\Coding Challenges Feb 001\obj\Debug\net7.0\Coding Challenges Feb 001.csproj.AssemblyReference.cache
+C:\Users\Mlwest5ITX\Desktop\C Sharp Master Folder\Coding Challenges Feb 001\Coding Challenges Feb 001\obj\Debug\net7.0\Coding Challenges Feb 001.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mlwest5ITX\Desktop\C Sharp Master Folder\Coding Challenges Feb 001\Coding Challenges Feb 001\obj\Debug\net7.0\Coding Challenges Feb 001.AssemblyInfoInputs.cache
+C:\Users\Mlwest5ITX\Desktop\C Sharp Master Folder\Coding Challenges Feb 001\Coding Challenges Feb 001\obj\Debug\net7.0\Coding Challenges Feb 001.AssemblyInfo.cs
+C:\Users\Mlwest5ITX\Desktop\C Sharp Master Folder\Coding Challenges Feb 001\Coding Challenges Feb 001\obj\Debug\net7.0\Coding Challenges Feb 001.csproj.CoreCompileInputs.cache
+C:\Users\Mlwest5ITX\Desktop\C Sharp Master Folder\Coding Challenges Feb 001\Coding Challenges Feb 001\obj\Debug\net7.0\Coding Challenges Feb 001.dll
+C:\Users\Mlwest5ITX\Desktop\C Sharp Master Folder\Coding Challenges Feb 001\Coding Challenges Feb 001\obj\Debug\net7.0\refint\Coding Challenges Feb 001.dll
+C:\Users\Mlwest5ITX\Desktop\C Sharp Master Folder\Coding Challenges Feb 001\Coding Challenges Feb 001\obj\Debug\net7.0\Coding Challenges Feb 001.pdb
+C:\Users\Mlwest5ITX\Desktop\C Sharp Master Folder\Coding Challenges Feb 001\Coding Challenges Feb 001\obj\Debug\net7.0\Coding Challenges Feb 001.genruntimeconfig.cache
+C:\Users\Mlwest5ITX\Desktop\C Sharp Master Folder\Coding Challenges Feb 001\Coding Challenges Feb 001\obj\Debug\net7.0\ref\Coding Challenges Feb 001.dll
