@@ -130,5 +130,53 @@
             return ans;
         }
 
+
+        /* Edabit Hard Reverse Coding Challenge #2
+         
+            This is a reverse coding challenge.
+
+            Your task is to create a function that, when fed the inputs below,
+            produce the sample outputs shown.
+
+            Examples:
+            3 ➞ 21
+
+            9 ➞ 2221
+
+            17 ➞ 22221
+
+            24 ➞ 22228
+         
+         */
+        public static int MysteryFunc(int num)
+        {
+            int ans = 0;
+            int first = 1;
+            int last = 0;
+            bool isOver = false;
+
+            do
+            {
+                if ((int)Math.Pow(2, first) > num)
+                {
+                    first--;
+                    last = num % (int)Math.Pow(2, first);
+                    isOver = true;
+                }
+                else
+                {
+                    first++;
+                }
+            } while (isOver == false);
+
+            int temp = (int)Math.Pow(10, first);
+
+            while (temp >= 10)
+            {
+                ans += temp * 2;
+                temp /= 10;
+            }
+            return ans + last;
+        }
     }
 }
