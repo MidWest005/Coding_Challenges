@@ -178,5 +178,64 @@
             }
             return ans + last;
         }
+
+        /* Edabit Hard Track the Robot (Part 1)
+            A robot has been given a list of movement instructions. Each instruction is either left, right, up or down, 
+             followed by a distance to move. The robot starts at [0, 0]. You want to calculate where the robot will end up 
+            and return its final position as an array.
+
+            To illustrate, if the robot is given the following instructions:
+
+            new string[] { "right 10", "up 50", "left 30", "down 10" }
+            It will end up 20 left and 40 up from where it started, so we return int[] { -20, 40 }.
+
+            Examples:
+            TrackRobot(new string[] { "right 10", "up 50", "left 30", "down 10" }) ➞ int[] { -20, 40 }
+
+            TrackRobot(new string[] { }) ➞ int[] { 0, 0 }
+            // If there are no instructions, the robot doesn't move.
+
+            TrackRobot(new string[] { "right 100", "right 100", "up 500", "up 10000" }) ➞ new int[] { 200, 10500 }
+            
+            Notes:
+            The only instructions given will be left, right, up or down.
+            The distance after the instruction is always a positive whole number.
+         */
+
+        public static int[] TrackRobot(string[] instructions)
+        {
+            int[] dir = { 0, 0 };
+            if (instructions.Length == 0)
+            {
+                return dir;
+            }
+            int move2 = 0;
+
+            foreach (string i in instructions)
+            {
+                string arrow = i.Substring(0, i.LastIndexOf(' '));
+                string move = i.Substring(i.LastIndexOf(' ') + 1, i.Length - i.LastIndexOf(' ') - 1);
+                move2 = Convert.ToInt32(move);
+
+                switch (arrow) //
+                {
+                    case "left":
+                        dir[0] -= move2;
+                        break;
+                    case "right":
+                        dir[0] += move2;
+                        break;
+                    case "up":
+                        dir[1] += move2;
+                        break;
+                    default:
+                        dir[1] -= move2;
+                        break;
+                }
+            }
+            return dir;
+        }
+
+
     }
 }
