@@ -237,5 +237,57 @@
         }
 
 
+        /*
+         Sum of two Udemy Challenge
+
+        This time you have to write a method that will take two arguments: 
+        a list of integers nums and an integer SumToFind. 
+        And it returns the number of possible UNIQUE pares made from this list 
+        where the sum equals to SumToFind
+
+
+
+        Example:
+
+        SumOfTwo([1, 1, 1, 2, 3, 4, 5, 2], 2)
+
+        It should return: 1
+        Explanation: there is only one pair sum of witch is equal to 2 (1,1)
+
+        ATTENTION: The main trick of this exercise is that its time complexity should be linear. 
+        That means you should NOT have any double/triple loops inside or deep recursion.
+         */
+        public static int SumOfTwo(int[] nums, int SumToFind)
+        {
+            int pairs = 0;
+            Dictionary<int, bool> dic = new Dictionary<int, bool>();
+            dic.Add(nums[0], false);
+
+            for (int i = 1; i < nums.Length; i++)
+            {
+                int target = SumToFind - nums[i];
+                if (dic.ContainsKey(target))    //1,1,2,3,4,5  
+                {
+                    if (dic[target] == false)
+                    {
+                        dic[target] = true;
+                        pairs++;
+                    }
+                }
+                else
+                {
+                    if (!dic.ContainsKey(nums[i]))
+                    {
+                        dic.Add(nums[i], false);
+                    }
+                }
+            }
+
+            return pairs;
+
+        }
+
+
+
     }
 }
