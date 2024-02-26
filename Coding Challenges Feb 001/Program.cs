@@ -408,6 +408,39 @@
             return "neither";
         }
 
+        /*  Longest Abecedarian Word
+                An abecedarian word is a word where all of its letters are arranged in 
+                alphabetical order. Examples of these words include:
+
+                *Empty
+                *Forty
+                *Almost
+            Given an array of words, create a function which returns the longest abecedarian word. 
+            If no word in an array matches the criterea, return an empty string.
+
+                Notes:
+            All words will be given in lowercase.
+            If two abecedarian words have the same length, return the word which appeared first in the array.
+         */
+
+
+        public static string LongestAbecedarian(string[] arr)
+        {
+            string longest = "";
+            foreach (var i in arr)
+            {
+                char[] temp = i.ToCharArray();
+                Array.Sort(temp);
+                string tempString = String.Join("", temp);
+
+                if (tempString.Equals(i) && (i.Length > longest.Length || longest.Length == 0))
+                {
+                    longest = tempString;
+                }
+            }
+
+            return longest;
+        }
 
 
 
