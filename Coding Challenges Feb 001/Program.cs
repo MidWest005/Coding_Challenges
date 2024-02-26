@@ -441,7 +441,74 @@
 
             return longest;
         }
+        /* Cats and Food Udemy
+         
+            So imagine you are in a kitchen that is full of cats. 
+            Every typical hungry cat will follow you if you hold some food, right?
 
+            Our goal is to count not hungry cats in the kitchen.
+
+            You with food in the kitchen will be marked as F
+
+            Every cat will be represented as ~O or O~ depending on the direction.
+
+
+            Examples:
+
+            Input: "~O~O~O~O F"
+            Return: 0 (all cats follow you)
+
+
+            Input: "O~~O~O~O F O~O~"
+            Return: 1 (one is not following)
+
+         */
+
+        public static int NotHungryCats(string kitchen)
+        {
+            int count = 0;
+            int goingLeft = 0;
+            int goingRight = 0;
+            Dictionary<char, bool> check = new Dictionary<char, bool>();
+            check.Add('~', false);
+            check.Add('O', false);
+
+
+            for (int i = 0; i < kitchen.Length; i++)
+            {
+                if (kitchen[i] == '~')
+                {
+                    check['~'] = true;
+                }
+                if (kitchen[i] == 'O')
+                {
+                    check['O'] = true;
+                }
+
+                if (check['~'] && check['O'])
+                {
+                    if (kitchen[i] == '~')
+                    {
+                        goingRight++;
+                    }
+                    else
+                    {
+                        goingLeft++;
+                    }
+                    check['O'] = false;
+                    check['~'] = false;
+                }
+
+                if (kitchen[i] == 'F')
+                {
+                    count = goingRight;
+                    goingRight = 0;
+                    goingLeft = 0;
+                }
+            }
+
+            return count + goingLeft;
+        }
 
 
     }
