@@ -4,12 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Dictionary<string, int> player = new();
-
-            player.Add("Jordan", 23);
-            player.Add("Pippen", 33);
-
-            Console.WriteLine($"{player["Jordan"]}"); //
+            Console.ReadKey();
         }
 
 
@@ -510,6 +505,61 @@
             return count + goingLeft;
         }
 
+        /* Same Letter Patterns V.Hard Edabit
+            Create a function that returns true if two strings share the same letter pattern, and false otherwise.
+
+            Examples:
+            SameLetterPattern("ABAB", "CDCD") ➞ true
+
+            SameLetterPattern("ABCBA", "BCDCB") ➞ true
+
+            SameLetterPattern("FFGG", "CDCD") ➞ false
+
+            SameLetterPattern("FFFF", "ABCD") ➞ false
+         
+         */
+
+        public static bool SameLetterPattern(string str1, string str2)
+        {
+            if (str1.Length != str2.Length)
+            {
+                return false;
+            }
+
+            int unq = 1;
+            int tic = 0;
+            bool run = true;
+            Dictionary<char, int> order = new Dictionary<char, int>();
+            string[] foo = { str1, str2 };
+            int[] pattern = new int[str1.Length];
+            string pat1 = "";
+            string pat2 = "";
+
+            for (int i = 0; i < str1.Length; i++)
+            {
+                if (order.ContainsKey(foo[tic][i]))
+                {
+                    pattern[i] = order[foo[tic][i]];
+                }
+                else
+                {
+                    order.Add(foo[tic][i], unq);
+                    unq++;
+                    pattern[i] = order[foo[tic][i]];
+                }
+                if (run && i == str1.Length - 1)
+                {
+                    order.Clear();
+                    i = -1;
+                    unq = 1;
+                    run = false;
+                    tic++;
+                    pat1 = string.Join("", pattern);
+                }
+            }
+            pat2 = string.Join("", pattern);
+            return pat1.Equals(pat2);
+        }
 
     }
 }
